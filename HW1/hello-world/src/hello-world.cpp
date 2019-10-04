@@ -11,7 +11,7 @@ int main() {
     int x;
     ifstream inFile;
 
-    inFile.open("HW1/hello-world/data.txt");
+    inFile.open("file.txt");
     if (!inFile) {
         cout << "Unable to open file";
         exit(1); // terminate with error
