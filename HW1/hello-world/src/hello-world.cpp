@@ -14,7 +14,6 @@ int main() {
     inFile.open("data.txt");
     if (!inFile) {
         cout << "Unable to open file";
-        exit(1); // terminate with error
     }
 
     while (inFile >> x) {
