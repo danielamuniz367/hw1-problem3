@@ -28,3 +28,5 @@
     g++ -std=c++11 -o insertTime insertTime.cpp
     OR
     g++ -std=c++11 -o mergeTime mergeTime.cpp
+    
+    b. then run results with: ./mergeTime OR ./insertTime
