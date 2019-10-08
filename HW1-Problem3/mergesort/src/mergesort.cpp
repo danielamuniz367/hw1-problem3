@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
+#include <iterator>
 
 using namespace std;
 
@@ -74,6 +75,8 @@ int main() {
 
 	int n;
 
+	ofstream myfile("merge.txt");
+
 	// creating array
 	while (inputData >> n) {
 		int *arr = new int[n];
@@ -87,7 +90,11 @@ int main() {
 		mergeSort(arr, 0, j - 1);
 
 		for (int i = 0; i < n; i++)
-			cout << arr[i] << " ";
-		cout << endl;
+			myfile << arr[i] << " ";
+		myfile << endl;
 	}
+	myfile.close();
+	inputData.close();
+
+	return 0;
 }
