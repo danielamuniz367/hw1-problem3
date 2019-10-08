@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <fstream>
+#include <iterator>
 
 using namespace std;
 
@@ -30,6 +31,7 @@ int main() {
 
 	int n;
 
+	ofstream myfile("insert.txt");
 	// creating array
 	while (inputData >> n) {
 		int *arr = new int[n];
@@ -43,11 +45,13 @@ int main() {
 		insertionSort(arr, n);
 
 		for (int i = 0; i < n; i++)
-			cout << arr[i] << " ";
-		cout << endl;
+			myfile << arr[i] << " ";
+		myfile << endl;
 	}
 
+	myfile.close();
 	inputData.close();
 
 	return 0;
 }
+
